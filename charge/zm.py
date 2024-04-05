@@ -45,9 +45,9 @@ async def sa(Client, message):
                     }, upsert=False)
             else:
                 r = redis.Redis(
-                    host="redis-18001.c82.us-east-1-2.ec2.cloud.redislabs.com",
-                    port=18001,
-                    password="eO00qpZScxQ6u1UsZ32Y94YuZ1J7pGWR",
+                    host="redis-16554.c323.us-east-1-2.ec2.cloud.redislabs.com",
+                    port=16554,
+                    password="ExxDoKVQzWb23efOJQADyJZOQuLWee1i",
                 )
                 antispam_time = int(r.get(message.from_user.id).decode("utf-8"))
                 spam_time = int(time.time()) - antispam_time
